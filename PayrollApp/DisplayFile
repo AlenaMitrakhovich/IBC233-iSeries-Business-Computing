@@ -1,0 +1,27 @@
+     A          R RECORD1
+     A                                  2 30'Payroll Program'
+     A                                  3  3'Alena Mitrakhovich'
+     A                                  2  3USER
+     A                                  5 14'Rates:'
+     A                                  9 13'Totals:'
+     A                                  5 21'Day Rate '
+     A                                  6 21'Afternoon Rate'
+     A                                  7 21'Night Rate'
+     A                                  9 21'Regular Pay'
+     A                                 10 21'Overtime Pay'
+     A                                 11 21'Company Payout'
+     A            DAYRATE   R        O  5 41REFFLD(SHIFTRATES/DAYRATE +
+     A                                      SENECAPAY/SHIFTRATES)
+     A                                      EDTCDE(2)
+     A            NIGHTRATE R        O  6 41REFFLD(SHIFTRATES/NIGHTRATE +
+     A                                      SENECAPAY/SHIFTRATES)
+     A                                      EDTCDE(2)
+     A            AFTNRATE  R        O  7 41REFFLD(SHIFTRATES/AFTNRATE +
+     A                                      SENECAPAY/SHIFTRATES)
+     A                                      EDTCDE(2)
+     A                                  2 61DATE
+     A                                      EDTCDE(Y)
+     A            TOTREGPAY      9  2O  9 41EDTCDE(1 $)
+     A            TOTOVTPAY      9  2  10 41EDTCDE(1 $)
+     A            TOTEMPPAY      9  2  11 41EDTCDE(1 $)
+     A            SHIFTTYPE     30   O  8 22
